@@ -1,0 +1,36 @@
+{% extends "img_search/layout.html"%}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<!--title>Image Search</title--> 
+</head> 
+<body> 
+	<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"-->
+	{% if currentimage %}
+	<H6>Image searched for::</H6>
+	<center>
+		<img src="{{ currentimage }}" class="rounded" alt="Image Loading Error" width="250" height="200">
+	</center>
+	{% endif %}
+
+	<hr><H6>Search Result(s)::</H6>
+	{% if imagelist %}
+		{% for val in imagelist %}
+		<a href="{{ MEDIA_URL }}{{ val }}" target="_blank">
+			<img src="{{ MEDIA_URL }}{{ val }}" class="rounded" alt="Image Loading Error" width="120" height="100">
+			<!--img src="{{ MEDIA_URL }}{{ val }}" class="rounded" alt="Image Loading Error" width="120" height="100">
+			 < View Larger
+				 Download
+				 Search More Like these
+				 .....-->
+		</a>
+		{% endfor %}
+	{% endif %} 
+</body> 
+</html> 
+{% endblock %}

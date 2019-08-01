@@ -1,0 +1,22 @@
+{% extends "img_search/layout.html"%}
+{% load static %}
+
+{% block content %}
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image_image</title> 
+</head> 
+<body> 
+	<div class="upload">
+		<H4>Please select an image and hit upload!!</H4><br>
+		<form method = "post" enctype="multipart/form-data"> 
+			{% csrf_token %} 
+			<!-- {{ form.as_p  }} {{request.session.img_name}} -->
+			{{ form.img_loc }}
+			<button type="submit">Upload</button> 
+		</form> <br>
+	</div>
+</body> 
+</html> 
+{% endblock %} 

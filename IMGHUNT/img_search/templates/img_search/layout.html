@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Advanced Image Search Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href= "{% static 'img_search/style.css' %}">
+    <!--script src="main.js"></script-->
+</head>
+<body>
+    <header> 
+        <nav class="navbar navbar-expand-lg navbar-light">
+        <!--nav class= "navbar navbar-default navbar-fixed-top"-->
+            <div class = "container">
+                <a class="navbar-brand" href="#">
+                        <img src="../../static/data/search.jpg" height="30" class="d-inline-block align-top"
+                        alt="mdb logo">Advance Image Search Engine</a>
+                 
+                    <div class="col-md-4">
+                        <div class="navbar-menu">
+                                <ul class="navbar-nav ml-lg-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/about">About</a>
+                                        </li>
+                                        <li class="nav-item active">
+                                                <a class="nav-link" href="/contactus">Contact Us</a>
+                                            </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/admin">Admin</a>
+                                        </li>
+                                </ul>
+                        </div>                 
+                    </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="offset-sm-2 col-md-8">
+                    {% block content %}
+                    {% endblock %}
+            </div>
+        </div>
+    </header>
+ 
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class= "bottome-footer">
+            <div class="col-md-15">© 2019 Copyright : AISE.com </div>
+            <div class="col-md-15"> Developed by Swati Vavilapalli</div>
+            <section id="lab_social_icon_footer">
+                    <!-- Include Font Awesome Stylesheet in Header -->
+                    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                    <div class="container">
+                            <div class="text-center center-block">
+                                    <a href="https://www.facebook.com/swati.vavilapalli"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                                    <a href="https://twitter.com/swativav"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                                    <a href="https://www.linkedin.com/in/swati-vavilapalli "><i id="social-ln" class="fa fa-linkedin-square fa-3x social"></i></a>
+                                    <a href="mailto:swati.vavilapalli407@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </footer>
+
+    <!--End Page footer -->
+    <!-- Footer >
+    <footer class="page-footer">
+       
+        <! Copyright >
+        <div class="footer-copyright">© 2018 Copyright : 
+          <a href="#"> AISE.com</a>        
+          <p>Designed by: Swati Vavilapalli </p>  
+        </div>
+        <! Copyright >
+      
+    </footer>
+      < Footer -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

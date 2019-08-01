@@ -1,0 +1,40 @@
+{% extends "img_search/layout.html" %}
+{% load static %}
+
+{% block content %}
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image_image</title> 
+</head> 
+<body> 
+	<div class="jumbotron jumbotron-fluid height100p banner" id="About">
+    <div class="container h100">
+      <div class ="contentBox h100">
+        <div class="content-about">
+          <h1> About Page</h1>
+          <p>Advanced Image Search Engine [AISE], is a web application
+             where a user can upload a sample image and get very specific
+             results (images) related to the input. This saves a lot of time,
+             since the user has no need to go through all the unrelated images
+             like the results of search by text.<br>
+             This is a search by sample image system, where the search solely
+             depends on the contents of the image. First, the features of the image
+             is extracted and calculate a index for the image.Then the index is compared
+             to the indecies of whole image database. Top 20 Images with less index difference 
+             will appear as results.<br> <br>
+             Python, Django, Opencv, HTML5, CSS and Bootstrap are used to built this application.
+
+            </p>
+        </div> 
+
+      </div>  
+
+    </div>
+    
+	</div>
+</body> 
+</html> 
+{% endblock %} 
+
+

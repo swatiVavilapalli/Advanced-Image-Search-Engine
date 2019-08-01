@@ -1,0 +1,37 @@
+{% extends "img_search/layout.html" %}
+{% load static %}
+
+{% block content %}
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image_image</title> 
+</head> 
+<body> 
+  
+	<div class="jumbotron jumbotron-fluid height100p banner" id="ContactUs">
+    <div class="container h100">
+      <div class ="contentBox h100">
+        <div class="content-contactus">
+          <h4> Contact Us</h4>
+          <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <div class="form-actions">
+                <button type="submit">Send</button>
+              </div>
+          </form>
+          <!--p>This website is designed by Swati Vavilapalli. <br>
+              For more details contact us at</p-->
+
+        </div> 
+
+      </div>  
+
+    </div>
+    
+	</div>
+</body> 
+</html> 
+{% endblock %} 
+
